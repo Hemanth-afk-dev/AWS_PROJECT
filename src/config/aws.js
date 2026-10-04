@@ -13,9 +13,9 @@ export const AWS_CONFIG = {
   cognitoDomain:
     import.meta.env.VITE_COGNITO_DOMAIN ||
     'https://us-east-1ycv43ymcr.auth.us-east-1.amazoncognito.com',
-  redirectUri: import.meta.env.VITE_REDIRECT_URI || 'http://localhost:5173',
+  redirectUri: import.meta.env.VITE_REDIRECT_URI || window.location.origin,
   logoutRedirectUri:
-    import.meta.env.VITE_LOGOUT_REDIRECT_URI || 'http://localhost:5173',
+    import.meta.env.VITE_LOGOUT_REDIRECT_URI || window.location.origin,
   scopes: (import.meta.env.VITE_COGNITO_SCOPES || 'openid email').split(' '),
   currentUserId: null,
 }
